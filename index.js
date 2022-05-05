@@ -47,7 +47,19 @@ btn.onclick = function() {
    
      
    }
+//    var btnco = document.querySelector(".btnco")
+   
+//    function test1(){
+//     this.style.backgroundColor="green"
+// }
+   
+//    btnco.addEventListener('click',test1)
 
+document.querySelectorAll('.btnco').forEach(function(e) {
+    e.addEventListener('click', function() {
+      this.style.backgroundColor = "red";
+    })
+  });
 
 ////////////////////////////////////////////////////////////////////////////////////
 
