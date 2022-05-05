@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Cycle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+     <div class="appbar">Easy cycle</div>
+    <div class="container">
+    
+
+     <div class="banner">
+      <div id="map"></div>
+     </div>
+
+      <div class="main">
+        <div class="left">
+
+
+          <div class="from">
+            <div class="title animate_bounce">From</div>
+            <div class="form_content">
+              <div class="smallTitle">select your start location</div>
+              <select class="form_combo">
+                <option>Parichowk</option>
+                <option>Metro station</option>
+                <option>Institutional area crossing park</option>
+                <option>Sharda roundabout</option>
+                <option>LG roundabout</option>
+                <option>Jagat farm</option>
+
+              </select>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="To">
+            <div class="title_to animate_bounce">To</div>
+            <div class="to_content">
+              <div class="smallTitle">select your drop location</div>
+              <select class="form_combo">
+               <option>Parichowk</option>
+               <option>Metro station</option>
+               <option>Institutional area crossing park</option>
+               <option>Sharda roundabout</option>
+               <option>LG roundabout</option>
+               <option>Jagat farm</option>
+              </select>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+        <div class="right">
+          <button class="start animate_bounce" id="myBtn">Start</button>
+        </div>
+
+        <div class="modal" id="myModal">
+              <!-- Modal content -->
+               <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="output">
+                         <h3>Total Time :</h3>
+                         <h3 id="outvalue"></h3>
+
+                         <button class="stop stopBtn" id="stop">Stop</button>
+                     </div>
+               </div>
+        </div>
+
+        
+      </div>
+      
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxYGlEG9HdVqJQQiENRRXMQ0J3FBVDqE0&callback=initMap"></script>
+<script src="./index.js"></script>
+
+
+  </body>
+</html>
