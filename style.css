@@ -275,7 +275,7 @@ font-size: 50px;
      margin: 20px;
      border: 2px solid grey;
      font-size: larger;
-     background-color: #3fa654;
+     background-color: green;
      color: white;
      transition: 0.3s;
      border-radius: 10px;
@@ -300,8 +300,26 @@ font-size: 50px;
       margin-top: 0%;
  }
  .green{
-      height: 2px;
-      width: 2px;
+      height: 30px;
+      width: 150px;
+      padding: 3px;
       border: 1px solid red;
-      background-color: #3fa654;
+      background-color: green;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 8px;
+      
  }
+
+ .red{
+     height: 30px;
+     width: 150px;
+     padding: 3px;
+     border: 1px solid red;
+     background-color:red;
+     font-size: 20px;
+     text-align: center;
+     margin-bottom: 8px; 
+     color: white;
+ }
+
