@@ -47,7 +47,7 @@ btn.onclick = function() {
    
      
    }
-//    var btnco = document.querySelector(".btnco")
+   var btnco = document.querySelectorAll(".btnco")
    
 //    function test1(){
 //     this.style.backgroundColor="green"
@@ -57,9 +57,17 @@ btn.onclick = function() {
 
 document.querySelectorAll('.btnco').forEach(function(e) {
     e.addEventListener('click', function() {
+        if (this.style.backgroundColor=="red"){
+            this.style.backgroundColor="green"
+        }else{
       this.style.backgroundColor = "red";
+    }
     })
   });
+
+
+
+ 
 
 ////////////////////////////////////////////////////////////////////////////////////
 
