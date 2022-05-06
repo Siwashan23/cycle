@@ -1,326 +1,137 @@
-*{
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
+let load=0
+var int;
+
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var btn_2 = document.getElementById("stop")
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
 }
 
-.container{
-     height: 100vh;
-     width: 100vw;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-evenly;
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+btn_2.addEventListener('click',()=>{
+     load=load*0.000277777778
+     hour=load
+     if (hour <1){
+         hour=1
+         var price=10
+     }
+     else{
+         Math.ceil(hour);
+         price= 10+5*(hour-1)
+         price=Math.ceil(price)
+     }
+     alert("You have to pay "+price)
+     int = 0
      
-}
-
-.appbar{
-     height: 5vh;
-     background-color: #1dda2c;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     
-
-     color: white;
-     font-weight: 500;
-     font-size: 40px;
-     
-}
+});
 
 
-.main{
-     background-color: white;
-     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
-     border-radius: 10px;
-
-     height: 100vh;
-     /* width: 70%; */
-     margin: auto;
-
-     display: flex;
-     flex-direction: row;
-     
-     
-}
-
-
-.left{
-     height: 100%;
-     width: 100%;
-     flex: 1;
-     display: flex;
-     flex-direction: column;
-     align-items:left;
-     justify-content: space-around;
-     padding: 5px;
-}
-
-.from{
-     display: flex;
-     flex-direction: column;
-     align-items:flex-start;
-     justify-content: space-around;
-     /* background-color: #FF3636; */
-}
-
-.title{
-     background-color: #0fe70f;
-     width: 179px;
-     height: 60.86px;
-     border-radius: 10px;
-     color: white;
-     font-size: 30px;
-     font-weight: 700;
-
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-
-     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
-     
-
-}
-
-.form_content{
-     margin-top: 20px;
-     font-weight: 500;
-font-size: 27px;
-color: #BBBBBB;
-}
-
-.form_combo{
-     margin: 15px;
-     -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;       /* Remove default arrow */
-   width: 379px;
-height: 81.72px;
-
-
-
-background: #D8FFE7;
-border-radius: 10px;   /* Add custom arrow */
-
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 47px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #525952;
-}
-
-
-
-.title_to{
-     background-color: #FF3636;
-     width: 179px;
-     height: 60.86px;
-     border-radius: 10px;
-     color: white;
-     font-size: 30px;
-     font-weight: 700;
-
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-
-     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
-}
-
-.smallTitle{
-     margin: 20px;
-     font-weight: 500;
-font-size: 27px;
-line-height: 20px;
-color: #BBBBBB;
-}
-
-
-
-.right{
-     height: 100%;
-     width: 100%;
-     flex: 1;
-     display: flex;
-     align-items:center;
-     justify-content: center;
-
-}
-
-.start{
-     border: none;
-     width: 275px;
-height: 293.86px;
-
-background: #FFFFFF;
-box-shadow: 3px 3px 20px #97B4FF;
-border-radius: 206px;
-font-size: 50px;
-
-
-
-}
-
-
-.animate_bounce{
-     transition: 0.2s;
-}
-
-.animate_bounce:hover{
-     transform: scale(1.13);
-     cursor: pointer;
-}
-
-.animate_bounce:active{
-     transform: scale(0.9);
-}
-
-
-.modal {
-     position: absolute;
-     top: 30%;
-
-     height: 30vh;
-     width: 50vh;
-     margin: auto;
-
-     background: #FFFFFF;
-     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-     border-radius: 10px;
-     display: none;
-   }
+btn.onclick = function() {
+     modal.style.display = "block";
+      int=setInterval(blurring,1000);
    
-   /* Modal Content/Box */
-   .modal-content {
-     background-color: #fefefe;
-     margin: 15% auto; /* 15% from the top and centered */
-     padding: 20px;
-     border: 1px solid #888;
-     width: 80%; /* Could be more or less, depending on screen size */
+     
    }
-
-
-
-   .close {
-     color: #aaa;
-     float: right;
-     font-size: 28px;
-     font-weight: bold;
-   }
+   var btnco = document.querySelectorAll(".btnco")
    
-   .close:hover,
-   .close:focus {
-     color: black;
-     text-decoration: none;
-     cursor: pointer;
-   }
+//    function test1(){
+//     this.style.backgroundColor="green"
+// }
+   
+//    btnco.addEventListener('click',test1)
+
+// document.querySelectorAll('.btnco').forEach(function(e) {
+//     e.addEventListener('click', function() {
+//         if (this.style.backgroundColor=="red"){
+//             this.style.backgroundColor="red"
+//         }else{
+//       this.style.backgroundColor = "red";
+//     }
+//     })
+//   });
+
+ 
+  for (button in btnco) {
+     btnco[button].onclick = function() {
+         btnco.forEach(function(btn){
+           btn.classList.remove('red');
+           
+         })
+         this.classList.add('red');
+     }
+ }
+
+ 
+
+////////////////////////////////////////////////////////////////////////////////////
 
 
-.banner{
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     height: 100vh;
-     overflow: hidden;
-     /* background-color: #1DCE64; */
+
+
+
+
+
+
+function start(){
+    var int=setInterval(blurring,1000);
+    
+}
+function convertHMS(value) {
+    const sec = parseInt(value, 10); // convert value to number if it's string
+    let hours   = Math.floor(sec / 3600); // get hours
+    let minutes = Math.floor((sec - (hours * 3600)) / 60); // get minutes
+    let seconds = sec - (hours * 3600) - (minutes * 60); //  get seconds
+    // add 0 if value < 10; Example: 2 => 02
+    if (hours   < 10) {hours   = "0"+hours;}
+    if (minutes < 10) {minutes = "0"+minutes;}
+    if (seconds < 10) {seconds = "0"+seconds;}
+    return hours+':'+minutes+':'+seconds; // Return is HH : MM : SS
 }
 
-   .banner img{
-     object-fit: fill;
-     width: 100%;
-     height: 100%;
-   }
+function blurring(){
+    load++
 
-
-
-.stopBtn{
-     background-color: #fa3c2f;
-     width: 179px;
-     height: 60.86px;
-     border-radius: 10px;
-     color: white;
-     font-size: 30px;
-     font-weight: 700;
-
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-
-     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
-}
-
-#map {
-     width: 300vh;
-     height: 800vh;
-     
-     
-     
- }
-.booking{
-     border: 1px solid black;
+    btn_2.addEventListener('click',()=>{
+        load=clearInterval(int)
+    })
+    document.getElementById("outvalue").innerHTML= convertHMS(load)
 }
 
 
-.btnco{
-     padding: 2px;
-     height: 10rem;
-     width: 10rem;
-     margin: 20px;
-     border: 2px solid grey;
-     font-size: larger;
-     background-color: green;
-     color: white;
-     transition: 0.3s;
-     border-radius: 10px;
-     
-     
- }
- .btnco:hover{
-     cursor: pointer;
-     background-color:#008cff;
-     
- }
- .btnco:active{
-     background-color: #CFB784;
-     color: white;
- }
- .head{
-      align-items: center;
-      background-color: #1dda2c;
-      border: 1px solid black;
-      color:white;
-      padding: 5px;
-      margin-top: 0%;
- }
- .green{
-      height: 30px;
-      width: 150px;
-      padding: 3px;
-      border: 1px solid red;
-      background-color: green;
-      font-size: 20px;
-      text-align: center;
-      margin-bottom: 8px;
-      
- }
 
- .red{
-     
-     padding: 3px;
-     border: 1px solid red;
-     background-color:red;
-     font-size: 20px;
-     text-align: center;
-     margin-bottom: 8px; 
-     color: white;
- }
+x=navigator.geolocation;
+x.getCurrentPosition(sucess,failure);
 
+function sucess(position){
+    var myLat=position.coords.latitude;
+    var myLong= position.coords.longitude;
 
+    var coords= new google.maps.LatLng(myLat,myLong);
 
+    var mapOptions={
+        zoom:15,
+        center: coords,
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+    
+    }
+
+    var map= new google.maps.Map(document.getElementById("map"),mapOptions);
+    var marker = new google.maps.Marker({map:map,position:coords});
+}
+
+function failure(){}
